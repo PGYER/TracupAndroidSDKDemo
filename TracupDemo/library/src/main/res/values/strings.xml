@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Tracup</string>
+    <string name="tracup_str_pb" translatable="false">Powered by </string>
+    <string name="tracup_str_bugcloud" translatable="false">bugCloud</string>
+    <string name="tracup_str_email_hint">Enter your Email</string>
+</resources>

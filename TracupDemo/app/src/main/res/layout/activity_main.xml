@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/padding">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email_setting"
+        android:textColor="@color/h1"
+        android:textSize="@dimen/h1" />
+
+    <LinearLayout style="@style/per_setting">
+
+        <TextView
+            style="@style/context_title"
+            android:text="@string/email_required" />
+
+        <RadioGroup style="@style/radio_group">
+
+            <RadioButton
+                android:id="@+id/email_required_yes"
+                style="@style/radio_btn"
+                android:checked="true"
+                android:text="@string/yes" />
+
+            <RadioButton
+                android:id="@+id/email_required_no"
+                style="@style/radio_btn"
+                android:checked="false"
+                android:text="@string/no" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout style="@style/per_setting">
+
+        <TextView
+            style="@style/context_title"
+            android:text="@string/email_visible" />
+
+        <RadioGroup style="@style/radio_group">
+
+            <RadioButton
+                android:id="@+id/email_visible_yes"
+                style="@style/radio_btn"
+                android:checked="true"
+                android:text="@string/yes" />
+
+            <RadioButton
+                android:id="@+id/email_visible_no"
+                style="@style/radio_btn"
+                android:checked="false"
+                android:text="@string/no" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <TextView
+        style="@style/reminder_text"
+        android:text="@string/email_visible_reminder" />
+
+    <LinearLayout style="@style/per_setting">
+
+        <TextView
+            style="@style/context_title"
+            android:text="@string/sound" />
+
+        <RadioGroup style="@style/radio_group">
+
+            <RadioButton
+                android:id="@+id/sound_yes"
+                style="@style/radio_btn"
+                android:checked="false"
+                android:text="@string/yes" />
+
+            <RadioButton
+                android:id="@+id/sound_no"
+                style="@style/radio_btn"
+                android:checked="true"
+                android:text="@string/no" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <TextView
+        style="@style/context_title"
+        android:text="@string/message_reminder" />
+
+    <LinearLayout style="@style/per_setting">
+
+        <TextView
+            style="@style/context_title"
+            android:text="@string/email_required"
+            android:visibility="invisible"/>
+
+        <RadioGroup style="@style/radio_group">
+
+            <RadioButton
+                android:id="@+id/message_reminder_yes"
+                style="@style/radio_btn"
+                android:checked="true"
+                android:text="@string/yes" />
+
+            <RadioButton
+                android:id="@+id/message_reminder_no"
+                style="@style/radio_btn"
+                android:checked="false"
+                android:text="@string/no" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout style="@style/per_setting">
+
+        <TextView
+            style="@style/context_title"
+            android:text="@string/shake_threshold" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="1950"
+            android:progress="300" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/per_setting">
+
+        <TextView
+            style="@style/reminder_text"
+            android:text="@string/shake_threshold_value" />
+
+        <TextView
+            android:id="@+id/shake_threshold_value"
+            style="@style/reminder_text" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/show_message_btn"
+        style="@style/btn"
+        android:text="@string/show_message" />
+
+</LinearLayout>

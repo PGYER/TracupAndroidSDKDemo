@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">TracupDemo</string>
+    <string name="email_setting">邮箱设置</string>
+    <string name="email_required">邮箱是否必填</string>
+    <string name="email_visible">邮箱是否可见</string>
+    <string name="email_visible_reminder">当邮箱是必填的时候，此设置无效</string>
+    <string name="sound">截屏声音开关</string>
+    <string name="message_reminder">是否自动提示摇一摇反馈信息</string>
+    <string name="shake_threshold">摇一摇灵敏度设置</string>
+    <string name="shake_threshold_value">灵敏值:</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="open">开</string>
+    <string name="close">关</string>
+    <string name="show_message">点击弹出消息提示</string>
+</resources>

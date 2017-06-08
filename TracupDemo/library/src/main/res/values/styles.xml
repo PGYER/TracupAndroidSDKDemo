@@ -1,0 +1,148 @@
+<resources>
+    <attr name="tracup_background_color" format="color|reference" />
+    <attr name="_primary_color" format="color|reference" />
+    <attr name="tracup_primary_color" format="color|reference" />
+    <attr name="tracup_button_text_color" format="color" />
+    <attr name="tracup_dialog_button_text_color" format="color" />
+    <attr name="tracup_theme_tinting_color" format="color|reference" />
+    <attr name="tracup_foreground_color" format="color|reference" />
+    <attr name="tracup_divider_color" format="color" />
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+    </style>
+
+    <style name="TracupSdkTheme.Base.Dark" parent="AppTheme">
+    </style>
+
+    <style name="TracupTheme.Dark" parent="TracupSdkTheme.Base.Dark">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>'
+
+        <item name="tracup_primary_color">#252525</item>
+        <item name="tracup_theme_tinting_color">@color/tracup_theme_tinting_color_dark</item>
+        <item name="tracup_foreground_color">#ffffff</item>
+        <item name="tracup_background_color">#363636</item>
+        <item name="tracup_divider_color">#474747</item>
+    </style>
+
+    <style name="TracupBaseText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">?attr/tracup_foreground_color</item>
+    </style>
+    <style name="TracupAnnotationContainer" parent="TracupBaseContainer">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="TracupBaseContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">#363636</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="TracupDialogButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="TracupDialogButtonText" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">?attr/tracup_dialog_button_text_color</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">?attr/tracup_background_color</item>
+    </style>
+
+    <style name="TracupTopDialogButton" parent="TracupDialogButton">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">left|start|center_vertical</item>
+        <item name="android:padding">8dp</item>
+        <item name="background">@color/tracup_annotation_color_red</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+    </style>
+
+    <style name="TracupToolbarTitle" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">@dimen/tracup_text_medium</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">left|start</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+    <style name="TracupEditTextStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">#ffffff</item>
+        <item name="android:gravity">start</item>
+        <item name="android:padding">20dp</item>
+    </style>
+    <style name="NoTitletDialog"
+        parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@color/tracup_theme_tinting_color_dark</item>
+    </style>
+    <style name="tranceDialog"
+        parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!-- 边框 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowIsTranslucent">false</item><!-- 半透明 -->
+        <item name="android:background">@android:color/transparent</item>
+
+    </style>
+
+    <declare-styleable name="ColorPickerPopUpView">
+        <attr name="view_orientation" format="enum">
+            <enum name="vertical" value="0" />
+            <enum name="horizontal" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="IconView">
+        <attr name="android:textSize" />
+        <attr name="android:textColor" />
+        <attr name="android:padding" />
+        <attr name="tracup_icon" format="enum">
+
+            <enum name="back" value="3" />
+            <enum name="bug" value="4" />
+            <enum name="cancel" value="5" />
+            <enum name="capture_screenshot" value="6" />
+            <enum name="close" value="8" />
+            <enum name="feedback" value="10" />
+            <enum name="next" value="12" />
+
+            <enum name="send" value="18" />
+            <enum name="stop" value="19" />
+            <enum name="blur" value="22" />
+            <enum name="brush" value="23" />
+            <enum name="magnify" value="24" />
+            <enum name="undo" value="25" />
+        </attr>
+    </declare-styleable>
+
+    <color name="tracup_annotation_color_blue">#2d8cd5</color>
+    <color name="tracup_annotation_color_default">@color/tracup_annotation_color_red</color>
+    <color name="tracup_annotation_color_gray">#273646</color>
+    <color name="tracup_annotation_color_green">#00a388</color>
+    <color name="tracup_annotation_color_red">#e16152</color>
+    <color name="tracup_annotation_color_yellow">#efca4c</color>
+    <color name="tracup_dialog_bg_color">#90000000</color>
+    <color name="tracup_text_color_grey">#737373</color>
+    <color name="tracup_theme_tinting_color_dark">#edecec</color>
+    <color name="tracup_theme_tinting_color_light">#737373</color>
+    <color name="tracup_transparent_color">#00000000</color>
+    <color name="tracup_url_color_blue">#365899</color>
+
+    <string name="font_fontFamily_medium" translatable="false">sans-serif-medium</string>
+    <dimen name="tracup_text_medium">18sp</dimen>
+    <dimen name="tracup_tool_bar_height">60dp</dimen>
+</resources>

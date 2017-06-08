@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/TracupBaseContainer"
+    android:layout_height="match_parent"
+    android:layout_gravity="top"
+    android:orientation="vertical">
+
+    <include layout="@layout/tracup_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffff"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#ff0000"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <EditText
+                android:id="@+id/tracup_edit_text_email"
+                style="@style/TracupEditTextStyle"
+                android:hint="@string/tracup_str_email_hint"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                tools:text="lily@bugcloud.com" />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#eaeaea"
+                />
+            <EditText
+                android:layout_marginTop="5dp"
+                android:id="@+id/tracup_edit_text_message"
+                style="@style/TracupEditTextStyle"
+                android:layout_height="wrap_content"
+                android:hint="info"
+                android:inputType="textAutoCorrect|textMultiLine|textCapSentences"
+                android:minLines="3"
+                tools:text="Hello world" />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#eaeaea"
+                />
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:id="@+id/tracup_attachments_container"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_gravity="top"
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <ImageView
+                    android:id="@+id/screenShotImage"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:scaleType="fitCenter" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+

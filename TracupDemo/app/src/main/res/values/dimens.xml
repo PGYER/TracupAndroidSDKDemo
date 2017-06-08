@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="check_box_size">20dp</dimen>
+    <dimen name="h1">16sp</dimen>
+    <dimen name="h2">14sp</dimen>
+    <dimen name="context">14sp</dimen>
+    <dimen name="reminder">12sp</dimen>
+    <dimen name="padding">20dp</dimen>
+    <dimen name="margin">10dp</dimen>
+</resources>

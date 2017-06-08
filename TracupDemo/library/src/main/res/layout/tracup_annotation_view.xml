@@ -1,0 +1,118 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    >
+
+    <FrameLayout
+        android:id="@+id/tracup_annotation_image_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/divider"
+        android:background="@android:color/white"
+        android:padding="8dp">
+
+        <FrameLayout
+            android:id="@+id/tracup_annotation_image_border"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <com.tracup.library.draw.AnnotationView
+                android:id="@+id/tracup_annotation_image"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <com.tracup.library.ui.ColorPicker
+        android:id="@+id/tracup_color_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tracup_annotation_actions_container"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:visibility="gone"
+        app:view_orientation="horizontal" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/tracup_annotation_actions_container"
+        android:background="#eaeaea" />
+
+    <LinearLayout
+
+        android:id="@+id/tracup_annotation_actions_container"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/tracup_theme_tinting_color_dark"
+        android:gravity="center|bottom"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+
+        android:weightSum="4">
+
+        <RelativeLayout
+            android:id="@+id/icon_brush_layout"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.tracup.library.view.IconView
+                android:id="@+id/icon_brush"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:gravity="center"
+                android:padding="0dp"
+                android:textColor="@color/tracup_theme_tinting_color_light"
+                android:textSize="26sp"
+                app:tracup_icon="brush" />
+
+            <View
+                android:id="@+id/brush_indicator"
+                android:layout_width="22dp"
+                android:layout_height="2dp"
+                android:layout_alignLeft="@+id/icon_brush"
+                android:layout_below="@id/icon_brush"
+                android:background="@color/tracup_annotation_color_red" />
+        </RelativeLayout>
+
+        <com.tracup.library.view.IconView
+            android:id="@+id/icon_blur"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/tracup_theme_tinting_color_light"
+            android:textSize="26sp"
+            app:tracup_icon="blur" />
+
+        <com.tracup.library.view.IconView
+            android:id="@+id/icon_undo"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/tracup_theme_tinting_color_light"
+            android:textSize="26sp"
+            app:tracup_icon="undo" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

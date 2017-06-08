@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/tracup_theme_tinting_color_dark">
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/tracup_btn_toolbar_left"-->
+    <!--style="@style/TracupTopDialogButton"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_alignParentStart="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:src="@drawable/bug_ic_close"-->
+    <!--android:tint="#fdfdfd"/>-->
+    <com.tracup.library.view.IconView
+        android:id="@+id/tracup_btn_toolbar_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:padding="20dp"
+        android:gravity="center"
+        android:clickable="false"
+        android:layout_alignParentLeft="true"
+        android:textSize="16sp"
+        app:tracup_icon="back"
+        android:textColor="@color/tracup_theme_tinting_color_light"/>
+
+
+    <TextView
+        style="@style/TracupToolbarTitle"
+        android:id="@+id/tracup_fragment_title"
+        android:layout_toRightOf="@id/tracup_btn_toolbar_left"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/tracup_text_color_grey"
+        android:text="hello"/>
+
+    <!--<ImageButton-->
+        <!--android:id="@+id/tracup_btn_toolbar_right"-->
+        <!--style="@style/TracupTopDialogButton"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:src="@drawable/ic_next"-->
+        <!--android:tint="#fdfdfd"/>-->
+    <com.tracup.library.view.IconView
+        style="@style/TracupTopDialogButton"
+        android:id="@+id/tracup_btn_toolbar_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_alignParentRight="true"
+        android:padding="20dp"
+        android:gravity="center"
+        android:clickable="false"
+        android:layout_alignParentEnd="true"
+        android:textSize="16sp"
+        app:tracup_icon="next"
+        android:textColor="@color/tracup_theme_tinting_color_light"/>
+
+</RelativeLayout>

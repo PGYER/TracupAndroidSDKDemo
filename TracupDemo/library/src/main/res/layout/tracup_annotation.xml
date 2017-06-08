@@ -1,0 +1,10 @@
+<LinearLayout style="@style/TracupBaseContainer">
+
+    <include layout="@layout/tracup_toolbar" />
+
+    <LinearLayout style="@style/TracupAnnotationContainer">
+
+        <include layout="@layout/tracup_annotation_view" />
+    </LinearLayout>
+
+</LinearLayout>
