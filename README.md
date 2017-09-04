@@ -1,2 +1,2 @@
 # TracupDemo
-A demo of using Tracup Android SDK.
+A demo use Tracup Android SDK.
